@@ -1,6 +1,7 @@
 import React from "react";
 import './App.css';
 import Navbar from "./components/navbar";
+import { useState } from 'react';
 
 const fotoFundo = new  URL ("./imagens/a.jpg", import.meta.url)
 
@@ -10,14 +11,14 @@ function MyButton() {
     setCount(count + 1);
   }
   return (
-    <button className='botao' onClick={handleClick}>{count} gosto</button>
+    <button className="button" onClick={handleClick}>{count} gosto</button>
   );
 }
 
 function Sobre () {
   return (
   <div class="about-section">
-  <h1>About Us Page</h1>
+  <h1>Sobre o Site</h1>
   <p>Alguns textos sobre quem somos e o que fazemos.</p>
   <p>Redimensione a janela do navegador para ver se esta página é responsiva.</p>
 </div>)
@@ -26,17 +27,15 @@ function Sobre () {
 function Card () {
   return (
     <>
-    <h2 className="tamanho">Our Team</h2>
-    
       <div class="column">
         <div class="card">
           <img src={fotoFundo} alt="Gilson"/>
           <div class="container">
-            <h2>Jane Doe</h2>
-            <p class="title">CEO & Founder</p>
-            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-            <p>jane@example.com</p>
-            <p><button class="button">Contact</button></p>
+            <h2>Programador</h2>
+            <p class="title">CEO & Dikulo Soluction</p>
+            <p>Cards literalmente responsivas</p>
+            <p>primeiroteste@gmail.com</p>
+            <MyButton/>
           </div>
         </div>
       </div>
@@ -45,11 +44,11 @@ function Card () {
     <div class="card">
       <img src={fotoFundo} alt="Gilson"/>
       <div class="container">
-        <h2>Mike Ross</h2>
-        <p class="title">Art Director</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>mike@example.com</p>
-        <p><button class="button">Contact</button></p>
+        <h2>Web-Designer</h2>
+        <p class="title">CEO & Dikulo Soluction</p>
+            <p>Cards literalmente responsivas</p>
+            <p>primeiroteste@gmail.com</p>
+        <MyButton/>
       </div>
     </div>
   </div>
@@ -58,11 +57,11 @@ function Card () {
     <div class="card">
       <img src={fotoFundo} alt="Gilson" />
       <div class="container">
-        <h2>John Doe</h2>
-        <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>john@example.com</p>
-        <p><button class="button">Contact</button></p>
+        <h2>Consultor de TI</h2>
+        <p class="title">CEO & Dikulo Soluction</p>
+            <p>Cards literalmente responsivas</p>
+            <p>primeiroteste@gmail.com</p>
+        <MyButton/>
       </div>
     </div>
   </div>
@@ -77,6 +76,8 @@ function App() {
       <Navbar />
       <div>
         <Sobre/>
+        <h2 className="tamanho">Contrate-me</h2>
+        <Card/>
         <Card/>
       </div>
 
