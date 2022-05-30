@@ -62,6 +62,7 @@ a:hover{
     cursor: pointer;
   }
   .nav__menu {
+    background: whitesmoke;
     position: fixed;
     top: 7vh;
     right: 0;
