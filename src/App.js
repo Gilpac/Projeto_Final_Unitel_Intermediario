@@ -4,6 +4,15 @@ import Navbar from "./components/navbar";
 
 const fotoFundo = new  URL ("./imagens/a.jpg", import.meta.url)
 
+function MyButton() {
+  const [count, setCount] = useState(0);
+  function handleClick() {
+    setCount(count + 1);
+  }
+  return (
+    <button className='botao' onClick={handleClick}>{count} gosto</button>
+  );
+}
 
 function Sobre () {
   return (
