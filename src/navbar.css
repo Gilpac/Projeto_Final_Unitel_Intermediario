@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap");
+
 *,
 *::after,
 *::before {
   margin: 0;
+  font-family: "Jost", sans-serif;
   box-sizing: border-box;
 }
 html {
@@ -15,15 +18,22 @@ li {
 }
 a {
   text-decoration: none;
-  color: rgb(204, 204, 204);
+  color: rgba(0, 0, 3, 0.8);
+  font-size: 120%;
+}
+
+a:hover{
+    color: skyblue;
+    transition: 0.5s;
 }
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 8vh;
-  background: rgb(0, 33, 65);
+  height: 12vh;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -10px;
 }
 .nav__brand {
   text-transform: uppercase;
@@ -57,10 +67,11 @@ a {
     right: 0;
     height: 93vh;
     width: 50vw;
-    background: rgb(0, 33, 65);
     flex-direction: column;
     transform: translateX(100%);
     transition: 0.5s ease-in;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -10px;
   }
 }
 /* Active Class */
